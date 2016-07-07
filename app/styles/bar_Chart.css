@@ -1,0 +1,9 @@
+  .bar
+	{
+		width :20px;
+		height: 75px;
+		background-color: blue;
+		display: inline-block;
+		margin-right: 2px;
+	    color :white;
+	}
