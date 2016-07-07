@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular directive bar chart example </title>
+    <link rel="stylesheet" type="text/css" href="../styles/angular_directive_Example.css">
+</head>
+
+<body>
+<div  ng-controller="Ctrl">
+    <bars-chart currency-data="myData"></bars-chart>
+
+</div>
+<div id="mySVG"><bars-chart1 ></bars-chart1></div>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js">
+</script>
+<script src="../scripts/app.js"></script>
+<script src="../scripts/controller.js"></script>
+<script src="../scripts/directive.js"></script>
+
+</body>
+</html>

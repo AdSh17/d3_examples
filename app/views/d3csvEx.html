@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSv/ Json  d3 js example</title>
+  </head>
+  <body>
+    <div id="mySVG"></div>
+    <script src="http://d3js.org/d3.v2.js"></script>
+    <script>
+
+    d3.json("data1.json",function(data){ 
+   // d3.csv("data.csv",function(data){
+         var svg = d3.select("#mySVG").append("svg")
+        .attr("width", 500)
+        .attr("height", 500)
+
+
+        svg.selectAll("rect")                  // create virtual rectangle template
+            .data(data)                            // bind data
+            .enter()                                 // for each row in data...
+            .append("rect")                      // bind rect & data row such that... 
+            .attr("width", function(d) {return d})
+            .attr("height", 48)  // 
+            .attr("x", function(d,i) { return i * 70 ;})           
+            .attr("fill","green");   
+           
+
+    })
+      
+    </script>
+  </body>
